@@ -6,4 +6,4 @@ export const Container = styled.div`
     padding: 50px;
     padding-left: 45%;
 
-`
+`;
