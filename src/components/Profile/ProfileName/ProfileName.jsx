@@ -1,8 +1,7 @@
 import { ProfileData } from "../ProfileData/ProfileData"
 
 export const ProfileName = ({ user }) => {
-  console.log(user)
-  return <div className="profile">
+  return <div>
     {user.map(user => (
       <ProfileData key={user.username} user={ user }/>
     ))}

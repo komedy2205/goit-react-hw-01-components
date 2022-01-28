@@ -1,7 +1,4 @@
-import { ProfileDataStyle } from './ProfileData.styled';
-import { Avatar } from './ProfileData.styled';
-import { Discription } from './ProfileData.styled';
-import { List } from './ProfileData.styled'
+import { ProfileDataStyle, ListElement, Avatar, Discription, List } from './ProfileData.styled';
 
 export const ProfileData = ({ user: { username, tag, location, avatar, stats } }) => {
     return <ProfileDataStyle>
@@ -16,18 +13,18 @@ export const ProfileData = ({ user: { username, tag, location, avatar, stats } }
         </div>
 
         <List>
-            <li>
-                <span>Followers </span>
+            <ListElement>
+                <span>Followers <br/></span>
                 <span>{stats.followers}</span>
-            </li>
-            <li>
-                <span>Views </span>
+            </ListElement>
+            <ListElement>
+                <span>Views <br/></span>
                 <span>{stats.views}</span>
-            </li>
-            <li>
-                <span>Likes </span>
+            </ListElement>
+            <ListElement>
+                <span>Likes <br/></span>
                 <span>{stats.likes}</span>
-            </li>
+            </ListElement>
         </List>
     </ProfileDataStyle>;
 }

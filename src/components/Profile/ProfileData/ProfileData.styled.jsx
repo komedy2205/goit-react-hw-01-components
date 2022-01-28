@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const ProfileDataStyle = styled.div`
     width: 300px;
-    height: 600px;
+    height: 400px;
     
     background-color: white;
    `;
@@ -20,7 +20,7 @@ export const Discription = styled.p`
 
 export const List = styled.ul`
     padding-left: 0px;
-
+ 
     list-style: none;
     display: block;
     display: flex;
@@ -28,3 +28,10 @@ export const List = styled.ul`
     text-align: center;
 `;
 
+export const ListElement = styled.li`
+    display: block;
+
+       margin-left: auto;
+    margin-right: auto;
+    
+`
