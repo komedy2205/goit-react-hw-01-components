@@ -1,9 +1,11 @@
-import { ProfileData } from "../ProfileData/ProfileData"
+import { ProfileData } from "../ProfileData/ProfileData";
+import { Container } from '../App/App.styled'
+
 
 export const ProfileName = ({ user }) => {
-  return <div>
+  return <Container>
     {user.map(user => (
       <ProfileData key={user.username} user={ user }/>
     ))}
-  </div>
+  </Container>
 }

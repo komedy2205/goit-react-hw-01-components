@@ -1,12 +1,11 @@
 
-
 export const StatisticData = ({ data: { id, label, percentage } }) => {
   return  <section>
   <h2>Upload stats</h2>
 
   <ul>
     <li>
-      <span>.docx </span>
+      <span>{label}</span>
       <span>4%</span>
     </li>
     <li>
