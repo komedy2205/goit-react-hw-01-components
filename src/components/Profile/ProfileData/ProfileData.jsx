@@ -1,4 +1,14 @@
-import { ProfileDataStyle, ListElement, Avatar, Discription, List } from './ProfileData.styled';
+import { ProfileDataStyle, ListElement, Avatar, Discription, List } from '../styles/Profile.styled';
+import { Container } from '../styles/Profile.styled'
+
+
+export const ProfileName = ({ user }) => {
+  return <Container>
+    {user.map(user => (
+      <ProfileData key={user.username} user={ user }/>
+    ))}
+  </Container>
+}
 
 export const ProfileData = ({ user: { username, tag, location, avatar, stats } }) => {
     return <ProfileDataStyle>
