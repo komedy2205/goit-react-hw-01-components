@@ -1,26 +1,33 @@
-
+import PropTypes from 'prop-types';
+import { ListElement, List, SpanElement } from '../../styles/Statistic.styled';
+import { Container } from '../../styles/Statistic.styled'
 
 export const StatisticData = ({ title, stats }) => {
-  return  <section>
-  <h2>Upload stats</h2>
+  return <Container>
+    {title && <h2>{title}</h2>}
+      <List>
+        {stats.map(({ id, label, percentage }) => (
+            <ListElement key={id}>
+              <SpanElement>{label} </SpanElement>
+              <SpanElement>{percentage}%</SpanElement>
+            </ListElement>
+          
+          )
+        )}
+      </List>
+  </Container>
+};
 
-  <ul>
-    {stats.map((stats) => {
-      return (
-        <StatisticData>
-          <li>
-            key={stats.id}
-          </li>
-          <li>
-            {stats.label}
-          </li>
-          <li>
-            {stats.percentage}
-          </li>
-        </StatisticData>
-      );
-         
-    })}
-</ul>
-    </section>
-}
+StatisticData.defaultProps = {
+  title: '',
+};
+StatisticData.propTypes = {
+  title: PropTypes.string,
+  stat: PropTypes.exact({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    percentage: PropTypes.number,
+  }),
+};
+
+export default StatisticData;

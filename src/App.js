@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <ProfileName user={user} />
-      <StatisticData data={data} />
+      <StatisticData title="Upload stats" stats={data} />
     </>
   );
 }
