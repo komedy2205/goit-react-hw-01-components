@@ -4,6 +4,8 @@ import { StatisticData } from './components/Statistics/StatisticData/StatisticDa
 import data from './components/Statistics/Data/Data.json';
 import { FriendListItem } from './components/FriendList/FriendList/FriendList';
 import friend from './components/FriendList/Data/friends.json';
+import { TransactionHistory } from './components/TransactionHistory/TransactionHistory/TransactionHistory';
+import transaction from './components/TransactionHistory/Data/transactions.json';
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <ProfileName user={user} />
       <StatisticData title="Upload stats" stats={data} />
       <FriendListItem friends={friend} />
+      <TransactionHistory transactions={transaction} />
     </>
   );
 }
