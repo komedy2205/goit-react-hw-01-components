@@ -1,25 +1,25 @@
 import PropTypes from 'prop-types';
-// import { Status, List, ListElement, Name } from '../styles/FriendList.styled'
+import { Container, ColumnElement, List, ListElement } from '../styles/Transaction.styled'
 
 export const TransactionHistory = ({ items }) => (
-    <table>
+    <Container>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <ListElement>Type</ListElement>
+          <ListElement>Amount</ListElement>
+          <ListElement>Currency</ListElement>
         </tr>
       </thead>
-      <tbody>
+      <List>
           {items.map(({ id, type, amount, currency }) => (
-            <tr key={id}>
-                <td>{type} </td>
-                <td>{amount} </td>
-                <td>{currency} </td>
-            </tr>
+          <tr key={id}>
+              <ColumnElement>{type} </ColumnElement>
+              <ColumnElement>{amount} </ColumnElement>
+              <ColumnElement>{currency} </ColumnElement>
+          </tr>
           ))}
-      </tbody>
-    </table>
+      </List>
+    </Container>
 );
     
 
