@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import { ListElement, List, SpanElement } from '../styles/Statistic.styled';
-import { Container } from '../styles/Statistic.styled'
+import { ListElement, List, SpanElement } from './Statistic.styled';
+import { Container } from './Statistic.styled'
 
 export const StatisticData = ({ title, stats }) => {
   return <Container>
