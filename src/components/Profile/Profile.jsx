@@ -2,7 +2,7 @@ import { ProfileDataStyle, ListElement, Avatar, Discription, List } from './Prof
 // import { Container } from './Profile.styled'
 
 
-export const ProfileData = ({ avatar, username, tag, location, stats }) => {
+export const ProfileData = ({ avatar, username, tag, location, followers, views, likes }) => {
     return <ProfileDataStyle>
         <div>
             <Avatar
@@ -17,15 +17,15 @@ export const ProfileData = ({ avatar, username, tag, location, stats }) => {
         <List>
             <ListElement>
                 <span>Followers <br/></span>
-                <span>{stats.followers}</span>
+                <span>{followers}</span>
             </ListElement>
             <ListElement>
                 <span>Views <br/></span>
-                <span>{stats.views}</span>
+                <span>{views}</span>
             </ListElement>
             <ListElement>
                 <span>Likes <br/></span>
-                <span>{stats.likes}</span>
+                <span>{likes}</span>
             </ListElement>
         </List>
     </ProfileDataStyle>;

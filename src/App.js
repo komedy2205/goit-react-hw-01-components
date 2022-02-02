@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <ProfileData
-        url={user.avatar}
+        avatar={user.avatar}
         name={user.name}
         tag={user.tag}
         location={user.location}
