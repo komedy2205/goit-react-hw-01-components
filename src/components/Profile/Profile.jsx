@@ -2,32 +2,30 @@ import { ProfileDataStyle, ListElement, Avatar, Discription, List } from './Prof
 // import { Container } from './Profile.styled'
 
 
-export const ProfileData = ({ user }) => {
+export const ProfileData = ({ avatar, username, tag, location, stats }) => {
     return <ProfileDataStyle>
-        <div>{user.map(user => (
-      <ProfileData key={user.username} user={ user }/>
-            ))}
+        <div>
             <Avatar
-                src={user.avatar} width={100}
+                src={avatar} width={100}
                 alt="avatar"
             />
-            <Discription>{user.username}</Discription>
-            <Discription>{user.tag}</Discription>
-            <Discription>{user.location}</Discription>
+            <Discription>{username}</Discription>
+            <Discription>@{tag}</Discription>
+            <Discription>{location}</Discription>
         </div>
 
         <List>
             <ListElement>
                 <span>Followers <br/></span>
-                <span>{user.stats.followers}</span>
+                <span>{stats.followers}</span>
             </ListElement>
             <ListElement>
                 <span>Views <br/></span>
-                <span>{user.stats.views}</span>
+                <span>{stats.views}</span>
             </ListElement>
             <ListElement>
                 <span>Likes <br/></span>
-                <span>{user.stats.likes}</span>
+                <span>{stats.likes}</span>
             </ListElement>
         </List>
     </ProfileDataStyle>;
