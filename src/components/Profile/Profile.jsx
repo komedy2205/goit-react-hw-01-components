@@ -2,7 +2,7 @@ import { ProfileDataStyle, ListElement, Avatar, Discription, List } from './Prof
 // import { Container } from './Profile.styled'
 
 
-export const ProfileData = ({ avatar, username, tag, location, followers, views, likes }) => {
+export const ProfileData = ({ avatar, username, tag, location, stats: { followers, views, likes } }) => {
     return <ProfileDataStyle>
         <div>
             <Avatar

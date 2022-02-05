@@ -8,16 +8,15 @@ import friend from './data/friends.json';
 import item from './data/transactions.json';
 
 function App() {
+  const { name, avatar, tag, location, stats } = user;
   return (
     <>
       <ProfileData
-        avatar={user.avatar}
-        name={user.name}
-        tag={user.tag}
-        location={user.location}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        avatar={avatar}
+        name={name}
+        tag={tag}
+        location={location}
+        stats={stats}
       />
       <StatisticData title="Upload stats" stats={data} />
       <FriendListItem friends={friend} />
